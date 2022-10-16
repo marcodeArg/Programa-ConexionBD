@@ -45,6 +45,7 @@ namespace pryDBConection
                 dbAdapter.Fill(dbTable);
 
                 dgvCourses.DataSource = dbTable;
+                dbConnection.Close();
             }
             catch (Exception err)
             {

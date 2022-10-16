@@ -22,6 +22,7 @@ namespace pryDBConection
 
 
         string path = "./INSTITUTO-DE-INFORMATICA.accdb";
+        string sentenceSQL = "SELECT * FROM ALUMNOS";
         OleDbConnection conectionDB;
         OleDbCommand commandDB;
 
@@ -38,28 +39,22 @@ namespace pryDBConection
         {
 
             try
-            {
-
+            {            
                 conectionDB = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path);
                 conectionDB.Open();
 
-                commandDB = new OleDbCommand();
-                commandDB.Connection = conectionDB;
-                
+                commandDB = new OleDbCommand(sentenceSQL, conectionDB);             
 
-
-                adapterDB = new OleDbDataAdapter("SELECT * FROM ALUMNOS", conectionDB);
+                adapterDB = new OleDbDataAdapter(commandDB);
                 addData = new DataSet();
 
-                adapterDB.Fill(addData, "ALUMNOS");
 
+                adapterDB.Fill(addData, "ALUMNOS");
 
                 dgvStudents.DataMember = "ALUMNOS";
                 dgvStudents.DataSource = addData;
 
-
                 conectionDB.Close();
-
             }
             catch (Exception error)
             {
