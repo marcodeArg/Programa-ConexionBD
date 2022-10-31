@@ -38,28 +38,33 @@ namespace pryDBConection
         private void frmConsultAthlete_Load(object sender, EventArgs e)
         {
 
-            try
-            {            
-                conectionDB = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path);
-                conectionDB.Open();
-
-                commandDB = new OleDbCommand(sentenceSQL, conectionDB);             
-
-                adapterDB = new OleDbDataAdapter(commandDB);
-                addData = new DataSet();
+            clsStudents student = new clsStudents();
+            student.TableName = "ALUMNOS";
+            student.ShowInGrid(dgvStudents);
 
 
-                adapterDB.Fill(addData, "ALUMNOS");
+            //try
+            //{            
+            //    conectionDB = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path);
+            //    conectionDB.Open();
 
-                dgvStudents.DataMember = "ALUMNOS";
-                dgvStudents.DataSource = addData;
+            //    commandDB = new OleDbCommand(sentenceSQL, conectionDB);             
 
-                conectionDB.Close();
-            }
-            catch (Exception error)
-            {
-                MessageBox.Show("Error: " + error.Message);  
-            }
+            //    adapterDB = new OleDbDataAdapter(commandDB);
+            //    addData = new DataSet();
+
+
+            //    adapterDB.Fill(addData, "ALUMNOS");
+
+            //    dgvStudents.DataMember = "ALUMNOS";
+            //    dgvStudents.DataSource = addData;
+
+            //    conectionDB.Close();
+            //}
+            //catch (Exception error)
+            //{
+            //    MessageBox.Show("Error: " + error.Message);  
+            //}
         }
     }
 }

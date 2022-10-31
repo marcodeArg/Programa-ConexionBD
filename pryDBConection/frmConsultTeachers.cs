@@ -18,7 +18,7 @@ namespace pryDBConection
             InitializeComponent();
         }
 
-        string path = "./INSTITUTO-DE-INFORMATICA.accdb";
+        string path = "./INSTITUTO-DE-INFORMATICA.mdb";
         string sentenceSQL = "SELECT * FROM PROFESORES";
 
         OleDbConnection dbConnection;
@@ -45,11 +45,8 @@ namespace pryDBConection
                 //Asignar el nombre de las columnas a la grilla
                 setColumnsNames(columnsCount);
 
-
-                int c = 0;
-
                 //Agregar el valor correspondiente a cada celda
-                addData(c);
+                addData();
 
                 dbReader.Close();
                 dbConnection.Close();
@@ -75,21 +72,11 @@ namespace pryDBConection
             }
         }
 
-        private void addData(int row)
+        private void addData()
         {
             while (dbReader.Read())
             {
-                dgvTeachers.Rows.Add();
-
-                //Agrego cada valor a la celda correspondiente
-                dgvTeachers.Rows[row].Cells[0].Value = dbReader.GetValue(0);
-                dgvTeachers.Rows[row].Cells[1].Value = dbReader.GetValue(1);
-                dgvTeachers.Rows[row].Cells[2].Value = dbReader.GetValue(2);
-                dgvTeachers.Rows[row].Cells[3].Value = dbReader.GetValue(3);
-                dgvTeachers.Rows[row].Cells[4].Value = dbReader.GetValue(4);
-                dgvTeachers.Rows[row].Cells[5].Value = dbReader.GetValue(5);
-
-                row++;
+                dgvTeachers.Rows.Add(dbReader[0], dbReader[1], dbReader[2], dbReader[3], dbReader[4], dbReader[5]);
             }
         }
     }

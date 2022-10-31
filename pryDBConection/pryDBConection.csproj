@@ -46,6 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsBaseDatos.cs" />
+    <Compile Include="clsCourses.cs" />
+    <Compile Include="clsStudents.cs" />
+    <Compile Include="clsTeachers.cs" />
     <Compile Include="frmConsultCourses.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,14 +68,74 @@
     <Compile Include="frmConsultTeachers.Designer.cs">
       <DependentUpon>frmConsultTeachers.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAddCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddCourses.Designer.cs">
+      <DependentUpon>frmAddCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDeleteCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeleteCourses.Designer.cs">
+      <DependentUpon>frmDeleteCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDeleteStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeleteStudents.Designer.cs">
+      <DependentUpon>frmDeleteStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDeleteTeachers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeleteTeachers.Designer.cs">
+      <DependentUpon>frmDeleteTeachers.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHome.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmHome.Designer.cs">
       <DependentUpon>frmHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAddStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddStudents.Designer.cs">
+      <DependentUpon>frmAddStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddTeachers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddTeachers.Designer.cs">
+      <DependentUpon>frmAddTeachers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateCourses.Designer.cs">
+      <DependentUpon>frmUpdateCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateStudents.Designer.cs">
+      <DependentUpon>frmUpdateStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateTeachers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateTeachers.Designer.cs">
+      <DependentUpon>frmUpdateTeachers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAddStudents.resx">
+      <DependentUpon>frmAddStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddTeachers.resx">
+      <DependentUpon>frmAddTeachers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmConsultCourses.resx">
       <DependentUpon>frmConsultCourses.cs</DependentUpon>
     </EmbeddedResource>
@@ -80,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmConsultTeachers.resx">
       <DependentUpon>frmConsultTeachers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddCourses.resx">
+      <DependentUpon>frmAddCourses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>

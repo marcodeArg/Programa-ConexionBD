@@ -17,22 +17,76 @@ namespace pryDBConection
             InitializeComponent();
         }
 
-        private void deportistaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void alumnosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmConsultStudents fAthlete = new frmConsultStudents();
-            fAthlete.ShowDialog();
+            frmAddStudents addStudents = new frmAddStudents();
+            addStudents.ShowDialog();
         }
 
-        private void entrenadorToolStripMenuItem_Click(object sender, EventArgs e)
+        private void elimnarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmConsultTeachers fTrainer = new frmConsultTeachers();
-            fTrainer.ShowDialog();
+            frmDeleteStudents delStudents = new frmDeleteStudents();
+            delStudents.ShowDialog();
         }
 
-        private void cursosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void actualizarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmConsultCourses fCourses = new frmConsultCourses();
-            fCourses.ShowDialog();
+            frmUpdateStudents updateStudents = new frmUpdateStudents();
+            updateStudents.ShowDialog();
+        }
+
+        private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultStudents consultStudents = new frmConsultStudents();
+            consultStudents.ShowDialog();
+        }
+
+        private void alumnosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddTeachers addTeachers = new frmAddTeachers();
+            addTeachers.ShowDialog();
+        }
+
+        private void eliminarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmDeleteTeachers deleteTeachers = new frmDeleteTeachers();
+            deleteTeachers.ShowDialog();
+        }
+
+        private void actualizarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUpdateTeachers updateTeachers = new frmUpdateTeachers();
+            updateTeachers.ShowDialog();
+        }
+
+        private void consultarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmConsultTeachers consultTeachers = new frmConsultTeachers();
+            consultTeachers.ShowDialog();
+        }
+
+        private void añadirToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            frmAddCourses addCourses = new frmAddCourses();
+            addCourses.ShowDialog();
+        }
+
+        private void eliminarToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            frmDeleteCourses deleteCourses = new frmDeleteCourses();
+            deleteCourses.ShowDialog();
+        }
+
+        private void actualizarToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            frmUpdateCourses updateCourses = new frmUpdateCourses();
+            updateCourses.ShowDialog();
+        }
+
+        private void consultarToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            frmConsultCourses consultCourses = new frmConsultCourses();
+            consultCourses.ShowDialog();
         }
     }
 }
