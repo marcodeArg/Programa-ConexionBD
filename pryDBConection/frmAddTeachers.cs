@@ -19,9 +19,29 @@ namespace pryDBConection
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            //...
+            clsTeachers teacher = new clsTeachers();
+            teacher.TableName = "PROFESORES";
 
-            MessageBox.Show("Profesor agregado con exito");
+            if (!teacher.Exist(txtCode.Text))
+            {
+                teacher.CodTeacher = txtCode.Text;
+                teacher.Name = txtName.Text;
+                teacher.Surname = txtSurname.Text;
+                teacher.Category = txtCategory.Text;
+                teacher.Dedication = txtDedication.Text;
+                teacher.Obs = txtObservations.Text;
+
+                teacher.AddTeacher();
+                MessageBox.Show("Profesor agregado con exito");
+
+
+            }
+            else
+            {
+                MessageBox.Show("Ya existe un profesor con el mismo codigo");
+            }
+
+            
         }
 
         private void btnConsult_Click(object sender, EventArgs e)

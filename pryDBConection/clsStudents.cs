@@ -8,16 +8,13 @@ using System.Data;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Data.Common;
-using System.Data.Odbc;
+
 
 
 namespace pryDBConection
 {
     internal class clsStudents : clsBaseDatos
     {
-
-
-        private OleDbDataReader dbReader;
 
         private string codStudent;
         private string name;
@@ -66,35 +63,6 @@ namespace pryDBConection
             
 
 
-        }
-
-        public void ShowInList(ComboBox list, string campo, string id)
-        {
-            try
-            {
-                DbConnection = new OleDbConnection(StringConection);
-                DbConnection.Open();
-
-                DbCommand = new OleDbCommand(TableName, DbConnection);
-                DbCommand.CommandType = CommandType.TableDirect;
-                DbCommand.CommandText = TableName;
-
-                DbAdapter = new OleDbDataAdapter(DbCommand);
-                DataBase = new DataSet();
-
-                DbAdapter.Fill(DataBase, TableName);
-
-                list.DataSource = DataBase.Tables[TableName];
-                list.DisplayMember = campo;
-                list.ValueMember = id;
-
-                DbConnection.Close();
-                DbAdapter.Dispose();
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show("Error", err.Message);
-            }
         }
 
     }

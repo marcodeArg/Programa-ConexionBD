@@ -34,13 +34,13 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.lblCodeTeacher = new System.Windows.Forms.Label();
             this.txtCode = new System.Windows.Forms.TextBox();
-            this.txtCodeTeacher = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtDuration = new System.Windows.Forms.TextBox();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnConsult = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.lstCodTeacher = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblCode
@@ -84,48 +84,41 @@
             this.lblCodeTeacher.AutoSize = true;
             this.lblCodeTeacher.Location = new System.Drawing.Point(23, 210);
             this.lblCodeTeacher.Name = "lblCodeTeacher";
-            this.lblCodeTeacher.Size = new System.Drawing.Size(144, 20);
+            this.lblCodeTeacher.Size = new System.Drawing.Size(150, 20);
             this.lblCodeTeacher.TabIndex = 4;
-            this.lblCodeTeacher.Text = "Codigo de profesor";
+            this.lblCodeTeacher.Text = "Nombre de profesor";
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(175, 23);
+            this.txtCode.Location = new System.Drawing.Point(180, 23);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(100, 26);
             this.txtCode.TabIndex = 5;
             // 
-            // txtCodeTeacher
-            // 
-            this.txtCodeTeacher.Location = new System.Drawing.Point(175, 207);
-            this.txtCodeTeacher.Name = "txtCodeTeacher";
-            this.txtCodeTeacher.Size = new System.Drawing.Size(100, 26);
-            this.txtCodeTeacher.TabIndex = 6;
-            // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(175, 69);
+            this.txtName.Location = new System.Drawing.Point(180, 69);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(214, 26);
             this.txtName.TabIndex = 7;
             // 
             // txtDuration
             // 
-            this.txtDuration.Location = new System.Drawing.Point(175, 115);
+            this.txtDuration.Location = new System.Drawing.Point(180, 115);
             this.txtDuration.Name = "txtDuration";
             this.txtDuration.Size = new System.Drawing.Size(100, 26);
             this.txtDuration.TabIndex = 8;
             // 
             // dtpDate
             // 
-            this.dtpDate.Location = new System.Drawing.Point(175, 161);
+            this.dtpDate.Location = new System.Drawing.Point(180, 161);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(214, 26);
             this.dtpDate.TabIndex = 9;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(31, 262);
+            this.btnAdd.Location = new System.Drawing.Point(27, 262);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 36);
             this.btnAdd.TabIndex = 10;
@@ -135,7 +128,7 @@
             // 
             // btnConsult
             // 
-            this.btnConsult.Location = new System.Drawing.Point(168, 262);
+            this.btnConsult.Location = new System.Drawing.Point(166, 262);
             this.btnConsult.Name = "btnConsult";
             this.btnConsult.Size = new System.Drawing.Size(88, 36);
             this.btnConsult.TabIndex = 11;
@@ -153,18 +146,26 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // lstCodTeacher
+            // 
+            this.lstCodTeacher.FormattingEnabled = true;
+            this.lstCodTeacher.Location = new System.Drawing.Point(180, 207);
+            this.lstCodTeacher.Name = "lstCodTeacher";
+            this.lstCodTeacher.Size = new System.Drawing.Size(214, 28);
+            this.lstCodTeacher.TabIndex = 13;
+            // 
             // frmAddCourses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(417, 320);
+            this.Controls.Add(this.lstCodTeacher);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnConsult);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dtpDate);
             this.Controls.Add(this.txtDuration);
             this.Controls.Add(this.txtName);
-            this.Controls.Add(this.txtCodeTeacher);
             this.Controls.Add(this.txtCode);
             this.Controls.Add(this.lblCodeTeacher);
             this.Controls.Add(this.lblDate);
@@ -175,6 +176,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmAddCourses";
             this.Text = "Agregar - Cursos";
+            this.Load += new System.EventHandler(this.frmAddCourses_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,12 +190,12 @@
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label lblCodeTeacher;
         private System.Windows.Forms.TextBox txtCode;
-        private System.Windows.Forms.TextBox txtCodeTeacher;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtDuration;
         private System.Windows.Forms.DateTimePicker dtpDate;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnConsult;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.ComboBox lstCodTeacher;
     }
 }

@@ -94,6 +94,9 @@ namespace pryDBConection
             }
         }
 
+
+        //--*-NO ME DEJA COMPARAR UN INT CON EL dbREADER 
+        //Por eso me deja agregar el numero 1 cuando ya existe el 001-*--
         public bool Exist(string cod)
         {
             dbConnection = new OleDbConnection(StringConection);

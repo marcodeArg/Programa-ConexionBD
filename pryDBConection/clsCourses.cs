@@ -11,46 +11,57 @@ namespace pryDBConection
 {
     internal class clsCourses : clsBaseDatos
     {
+
         private string codCourse;
-        private string name;
-        private string duration;
+        private string nameCourse;
+        private int duration;
         private DateTime date;
         private string codTeacher;
 
-        public string CodCourse { get; set; }
-        public string Name { get; set; }
-        public DateTime Date { get; set; }
-        public string CodTeacher { get; set; }
+        public string CodCourse { get { return codCourse; } set { codCourse = value; } }
+        public string NameCourse { get { return nameCourse; } set { nameCourse = value; } }
+        public int Duration { get { return duration; } set { duration = value; } }
+        public DateTime Date { get { return date; } set { date = value; } }
+        public string CodTeacher { get { return codTeacher; } set { codTeacher = value; } }
+
+        
+        public void AddCourse()
+        {
+            string sql = "";
+            sql = "INSERT INTO CURSO (COD_CURSO, CURSO, DURACION, FECHA, COD_PROFESOR) VALUES (@codCourse,@course,@duration,@date,@codTeacher)";
+
+            DbConnection = new OleDbConnection(StringConection);
 
 
-        //public void ShowInList(ComboBox list)
-        //{
-        //    try
-        //    {
-        //        DbConnection = new OleDbConnection(StringConection);
-        //        DbConnection.Open();
+            try
+            {
+                DbConnection.Open();
 
-        //        DbCommand = new OleDbCommand(TableName, DbConnection);
-        //        DbCommand.CommandType = CommandType.TableDirect;
-        //        DbCommand.CommandText = TableName;
+                DbCommand = new OleDbCommand(sql, DbConnection);
 
-        //        DbAdapter = new OleDbDataAdapter(DbCommand);
-        //        DataBase = new DataSet();
+                DbCommand.Parameters.AddWithValue("@codCourse", codCourse);
+                DbCommand.Parameters.AddWithValue("@course", nameCourse);
+                DbCommand.Parameters.AddWithValue("@duration", duration);
+                DbCommand.Parameters.AddWithValue("@date", date);
+                DbCommand.Parameters.AddWithValue("@codTeacher", codTeacher);
 
-        //        DbAdapter.Fill(DataBase, TableName);
+                DbCommand.CommandText = sql;
+                DbCommand.ExecuteNonQuery();
 
-        //        list.DataSource = DataBase.Tables[TableName];
-        //        list.DisplayMember = "CURSO";
-        //        list.ValueMember = "COD_CURSO";
+                DbConnection.Close();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Error:" + err.Message);
 
-        //        DbConnection.Close();
-        //        DbAdapter.Dispose();
-        //    }
-        //    catch (Exception err)
-        //    {
-        //        MessageBox.Show("Error", err.Message);
-        //    }
-        //}
+            }
+
+            // PARA UPDATE LO MISMO SOLAMENTE CAMBIANDO SQL
+
+
+
+
+        }
 
     }
 

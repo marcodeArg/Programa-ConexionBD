@@ -17,17 +17,17 @@ namespace pryDBConection
             InitializeComponent();
         }
 
-        clsStudents student = new clsStudents();
+        
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string varCode = txtCode.Text;
+            clsStudents student = new clsStudents();
             student.TableName = "ALUMNOS";
             
-
-            if (!student.Exist(varCode))
+            //--*-TENGO QUE VALIDAR SI EXISTE PORQUE NO ESTA EN MODO AUTONUMERACION-*--
+            if (!student.Exist(txtCode.Text))
             {
-                student.CodStudent = varCode;
+                student.CodStudent = txtCode.Text;
                 student.Name = txtName.Text;
                 student.Surname = txtSurname.Text;
                 student.CodCourse = lstCodCourse.SelectedValue.ToString();
@@ -60,7 +60,6 @@ namespace pryDBConection
             clsCourses course = new clsCourses();
             course.TableName = "CURSO";
             
-            //TERMINAR DE VER ESTO, ANDA PERO TERMINAR DE ACOMODAR EL CODIGO
             course.ShowInList(lstCodCourse, "CURSO", "COD_CURSO");
         }
     }
