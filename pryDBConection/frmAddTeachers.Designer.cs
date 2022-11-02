@@ -43,11 +43,12 @@
             this.lblDedication = new System.Windows.Forms.Label();
             this.txtObservations = new System.Windows.Forms.TextBox();
             this.lblObservations = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(281, 291);
+            this.btnExit.Location = new System.Drawing.Point(279, 361);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 36);
             this.btnExit.TabIndex = 26;
@@ -57,7 +58,7 @@
             // 
             // btnConsult
             // 
-            this.btnConsult.Location = new System.Drawing.Point(148, 291);
+            this.btnConsult.Location = new System.Drawing.Point(168, 361);
             this.btnConsult.Name = "btnConsult";
             this.btnConsult.Size = new System.Drawing.Size(88, 36);
             this.btnConsult.TabIndex = 25;
@@ -67,7 +68,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(28, 291);
+            this.btnAdd.Location = new System.Drawing.Point(70, 361);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 36);
             this.btnAdd.TabIndex = 24;
@@ -77,28 +78,28 @@
             // 
             // txtCategory
             // 
-            this.txtCategory.Location = new System.Drawing.Point(163, 132);
+            this.txtCategory.Location = new System.Drawing.Point(161, 202);
             this.txtCategory.Name = "txtCategory";
             this.txtCategory.Size = new System.Drawing.Size(125, 26);
             this.txtCategory.TabIndex = 23;
             // 
             // txtSurname
             // 
-            this.txtSurname.Location = new System.Drawing.Point(163, 94);
+            this.txtSurname.Location = new System.Drawing.Point(161, 164);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(191, 26);
             this.txtSurname.TabIndex = 22;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(163, 56);
+            this.txtName.Location = new System.Drawing.Point(161, 126);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(191, 26);
             this.txtName.TabIndex = 21;
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(163, 18);
+            this.txtCode.Location = new System.Drawing.Point(161, 88);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(85, 26);
             this.txtCode.TabIndex = 20;
@@ -106,7 +107,7 @@
             // lblCategory
             // 
             this.lblCategory.AutoSize = true;
-            this.lblCategory.Location = new System.Drawing.Point(24, 135);
+            this.lblCategory.Location = new System.Drawing.Point(22, 205);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.Size = new System.Drawing.Size(78, 20);
             this.lblCategory.TabIndex = 19;
@@ -115,7 +116,7 @@
             // lblSurname
             // 
             this.lblSurname.AutoSize = true;
-            this.lblSurname.Location = new System.Drawing.Point(24, 97);
+            this.lblSurname.Location = new System.Drawing.Point(22, 167);
             this.lblSurname.Name = "lblSurname";
             this.lblSurname.Size = new System.Drawing.Size(65, 20);
             this.lblSurname.TabIndex = 18;
@@ -124,7 +125,7 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(24, 59);
+            this.lblName.Location = new System.Drawing.Point(22, 129);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(65, 20);
             this.lblName.TabIndex = 17;
@@ -133,7 +134,7 @@
             // lblCode
             // 
             this.lblCode.AutoSize = true;
-            this.lblCode.Location = new System.Drawing.Point(24, 21);
+            this.lblCode.Location = new System.Drawing.Point(22, 91);
             this.lblCode.Name = "lblCode";
             this.lblCode.Size = new System.Drawing.Size(59, 20);
             this.lblCode.TabIndex = 16;
@@ -141,7 +142,7 @@
             // 
             // txtDedication
             // 
-            this.txtDedication.Location = new System.Drawing.Point(163, 170);
+            this.txtDedication.Location = new System.Drawing.Point(161, 240);
             this.txtDedication.Name = "txtDedication";
             this.txtDedication.Size = new System.Drawing.Size(191, 26);
             this.txtDedication.TabIndex = 28;
@@ -149,7 +150,7 @@
             // lblDedication
             // 
             this.lblDedication.AutoSize = true;
-            this.lblDedication.Location = new System.Drawing.Point(24, 173);
+            this.lblDedication.Location = new System.Drawing.Point(22, 243);
             this.lblDedication.Name = "lblDedication";
             this.lblDedication.Size = new System.Drawing.Size(88, 20);
             this.lblDedication.TabIndex = 27;
@@ -157,7 +158,7 @@
             // 
             // txtObservations
             // 
-            this.txtObservations.Location = new System.Drawing.Point(163, 208);
+            this.txtObservations.Location = new System.Drawing.Point(161, 278);
             this.txtObservations.Multiline = true;
             this.txtObservations.Name = "txtObservations";
             this.txtObservations.Size = new System.Drawing.Size(191, 62);
@@ -166,17 +167,29 @@
             // lblObservations
             // 
             this.lblObservations.AutoSize = true;
-            this.lblObservations.Location = new System.Drawing.Point(24, 211);
+            this.lblObservations.Location = new System.Drawing.Point(22, 281);
             this.lblObservations.Name = "lblObservations";
             this.lblObservations.Size = new System.Drawing.Size(114, 20);
             this.lblObservations.TabIndex = 29;
             this.lblObservations.Text = "Observaciones";
             // 
+            // lblTitle
+            // 
+            this.lblTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.Location = new System.Drawing.Point(0, 0);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(381, 64);
+            this.lblTitle.TabIndex = 31;
+            this.lblTitle.Text = "Agregar profesor";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmAddTeachers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(380, 342);
+            this.ClientSize = new System.Drawing.Size(381, 423);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.txtObservations);
             this.Controls.Add(this.lblObservations);
             this.Controls.Add(this.txtDedication);
@@ -218,5 +231,6 @@
         private System.Windows.Forms.Label lblDedication;
         private System.Windows.Forms.TextBox txtObservations;
         private System.Windows.Forms.Label lblObservations;
+        private System.Windows.Forms.Label lblTitle;
     }
 }

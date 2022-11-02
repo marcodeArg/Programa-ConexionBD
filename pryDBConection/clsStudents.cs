@@ -59,8 +59,38 @@ namespace pryDBConection
             }
 
             // PARA UPDATE LO MISMO SOLAMENTE CAMBIANDO SQL
+        }
 
-            
+        public void UpdateStudent(string id)
+        {
+            string sql = "UPDATE ALUMNOS " +
+                "SET NOMBRE=@name,APELLIDO=@surname,COD_CURSO=@codCourse " +
+                "WHERE COD_ALUMNO=@id";
+
+            DbConnection = new OleDbConnection(StringConection);
+
+            try
+            {
+                DbConnection.Open();
+
+                DbCommand = new OleDbCommand(sql, DbConnection);
+                DbCommand.Parameters.AddWithValue("@name", name);
+                DbCommand.Parameters.AddWithValue("@surname", surname);
+                DbCommand.Parameters.AddWithValue("@codCourse", codCourse);
+                DbCommand.Parameters.AddWithValue("@id", id);
+
+                DbCommand.CommandText = sql;
+                DbCommand.ExecuteNonQuery();
+
+                DbCommand.Dispose();
+                DbConnection.Close();
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Error:" + err.Message);
+            }
+
 
 
         }

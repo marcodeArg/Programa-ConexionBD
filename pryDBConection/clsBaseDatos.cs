@@ -94,6 +94,33 @@ namespace pryDBConection
             }
         }
 
+        public void ShowInList(ComboBox list, string column)
+        {
+            try
+            {
+                dbConnection = new OleDbConnection(stringConection);
+                dbConnection.Open();
+
+                dbCommand = new OleDbCommand(tableName, dbConnection);
+                dbCommand.CommandType = CommandType.TableDirect;
+                dbCommand.CommandText = tableName;
+
+                dbAdapter = new OleDbDataAdapter(dbCommand);
+                dataBase = new DataSet();
+
+                dbAdapter.Fill(dataBase, tableName);
+
+                list.DataSource = dataBase.Tables[tableName];
+                list.DisplayMember = column;
+
+                dbConnection.Close();
+                dbAdapter.Dispose();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Error", err.Message);
+            }
+        }
 
         //--*-NO ME DEJA COMPARAR UN INT CON EL dbREADER 
         //Por eso me deja agregar el numero 1 cuando ya existe el 001-*--

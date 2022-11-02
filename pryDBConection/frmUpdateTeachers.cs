@@ -16,5 +16,25 @@ namespace pryDBConection
         {
             InitializeComponent();
         }
+
+        private void frmUpdateTeachers_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConsult_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

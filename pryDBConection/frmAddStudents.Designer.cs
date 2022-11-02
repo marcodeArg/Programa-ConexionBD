@@ -39,12 +39,13 @@
             this.btnConsult = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.lstCodCourse = new System.Windows.Forms.ComboBox();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblCode
             // 
             this.lblCode.AutoSize = true;
-            this.lblCode.Location = new System.Drawing.Point(25, 28);
+            this.lblCode.Location = new System.Drawing.Point(19, 81);
             this.lblCode.Name = "lblCode";
             this.lblCode.Size = new System.Drawing.Size(59, 20);
             this.lblCode.TabIndex = 0;
@@ -53,7 +54,7 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(25, 63);
+            this.lblName.Location = new System.Drawing.Point(19, 116);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(65, 20);
             this.lblName.TabIndex = 1;
@@ -62,7 +63,7 @@
             // lblSurname
             // 
             this.lblSurname.AutoSize = true;
-            this.lblSurname.Location = new System.Drawing.Point(25, 98);
+            this.lblSurname.Location = new System.Drawing.Point(19, 151);
             this.lblSurname.Name = "lblSurname";
             this.lblSurname.Size = new System.Drawing.Size(65, 20);
             this.lblSurname.TabIndex = 2;
@@ -71,7 +72,7 @@
             // lblCodeCourse
             // 
             this.lblCodeCourse.AutoSize = true;
-            this.lblCodeCourse.Location = new System.Drawing.Point(25, 133);
+            this.lblCodeCourse.Location = new System.Drawing.Point(19, 186);
             this.lblCodeCourse.Name = "lblCodeCourse";
             this.lblCodeCourse.Size = new System.Drawing.Size(124, 20);
             this.lblCodeCourse.TabIndex = 3;
@@ -79,28 +80,28 @@
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(164, 25);
+            this.txtCode.Location = new System.Drawing.Point(158, 78);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(85, 26);
             this.txtCode.TabIndex = 4;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(164, 57);
+            this.txtName.Location = new System.Drawing.Point(158, 110);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(237, 26);
             this.txtName.TabIndex = 5;
             // 
             // txtSurname
             // 
-            this.txtSurname.Location = new System.Drawing.Point(164, 95);
+            this.txtSurname.Location = new System.Drawing.Point(158, 148);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(237, 26);
             this.txtSurname.TabIndex = 6;
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(328, 174);
+            this.btnExit.Location = new System.Drawing.Point(322, 227);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 36);
             this.btnExit.TabIndex = 15;
@@ -110,7 +111,7 @@
             // 
             // btnConsult
             // 
-            this.btnConsult.Location = new System.Drawing.Point(218, 174);
+            this.btnConsult.Location = new System.Drawing.Point(212, 227);
             this.btnConsult.Name = "btnConsult";
             this.btnConsult.Size = new System.Drawing.Size(88, 36);
             this.btnConsult.TabIndex = 14;
@@ -120,7 +121,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(121, 174);
+            this.btnAdd.Location = new System.Drawing.Point(115, 227);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 36);
             this.btnAdd.TabIndex = 13;
@@ -131,16 +132,28 @@
             // lstCodCourse
             // 
             this.lstCodCourse.FormattingEnabled = true;
-            this.lstCodCourse.Location = new System.Drawing.Point(164, 130);
+            this.lstCodCourse.Location = new System.Drawing.Point(158, 183);
             this.lstCodCourse.Name = "lstCodCourse";
             this.lstCodCourse.Size = new System.Drawing.Size(237, 28);
             this.lstCodCourse.TabIndex = 16;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.Location = new System.Drawing.Point(0, 0);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(423, 64);
+            this.lblTitle.TabIndex = 17;
+            this.lblTitle.Text = "Agregar estudiante";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmAddStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(427, 240);
+            this.ClientSize = new System.Drawing.Size(423, 278);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.lstCodCourse);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnConsult);
@@ -176,5 +189,6 @@
         private System.Windows.Forms.Button btnConsult;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ComboBox lstCodCourse;
+        private System.Windows.Forms.Label lblTitle;
     }
 }

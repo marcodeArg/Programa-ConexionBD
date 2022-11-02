@@ -29,3 +29,5 @@ C:\Users\mrc\dev\Conexion-BD\Programa-ConexionBD\pryDBConection\obj\Debug\pryDBC
 C:\Users\mrc\dev\Conexion-BD\Programa-ConexionBD\pryDBConection\obj\Debug\pryDBConection.frmAddStudents.resources
 C:\Users\mrc\dev\Conexion-BD\Programa-ConexionBD\pryDBConection\obj\Debug\pryDBConection.frmAddTeachers.resources
 C:\Users\mrc\dev\Conexion-BD\Programa-ConexionBD\pryDBConection\obj\Debug\pryDBConection.frmAddCourses.resources
+C:\Users\mrc\dev\Conexion-BD\Programa-ConexionBD\pryDBConection\obj\Debug\pryDBConection.frmUpdateStudents.resources
+C:\Users\mrc\dev\Conexion-BD\Programa-ConexionBD\pryDBConection\obj\Debug\pryDBConection.frmUpdateCourses.resources

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace pryDBConection
 {
@@ -56,12 +57,39 @@ namespace pryDBConection
 
             }
 
-            // PARA UPDATE LO MISMO SOLAMENTE CAMBIANDO SQL
+        }
 
+        public void UpdateCourse(string id)
+        {
+            string sql = "UPDATE CURSO " +
+            "SET CURSO=@name,DURACION=@duration,FECHA=@date,COD_PROFESOR=@codTeacher " +
+            "WHERE COD_CURSO=@id";
 
+            DbConnection = new OleDbConnection(StringConection);
 
+            try
+            {
+                DbConnection.Open();
+
+                DbCommand = new OleDbCommand(sql, DbConnection);
+                DbCommand.Parameters.AddWithValue("@name", nameCourse);
+                DbCommand.Parameters.AddWithValue("@duration", duration.ToString());
+                DbCommand.Parameters.AddWithValue("@date", date);
+                DbCommand.Parameters.AddWithValue("@codTeacher", codTeacher);
+                DbCommand.Parameters.AddWithValue("@id", id);
+
+                DbCommand.CommandText = sql;
+                DbCommand.ExecuteNonQuery();
+
+                DbCommand.Dispose();
+                DbConnection.Close();
 
         }
+            catch (Exception err)
+            {
+                MessageBox.Show("Error:" + err.Message);
+            }
+}
 
     }
 
